@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#24170f" />
+    <meta name="description" content="Western Shooter 3D - um jogo de ação no Velho Oeste." />
+    <title>Western Shooter 3D</title>
+  </head>
+  <body>
+    <div id="game-root">
+      <div id="hud" class="hud hidden">
+        <div class="hud-top">
+          <div class="hud-brand"><span class="brand-star">★</span> WESTERN SHOOTER</div>
+          <div class="hud-wave">FASE <strong id="wave-value">1</strong></div>
+        </div>
+        <div class="hud-stats">
+          <div class="stat">
+            <span class="stat-label">VIDA</span>
+            <div class="meter"><div id="health-fill" class="meter-fill health-fill"></div></div>
+            <strong id="health-value">100</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">MUNIÇÃO</span>
+            <div class="ammo-line"><strong id="ammo-value">12 / 12</strong><span id="reload-label"></span></div>
+          </div>
+          <div class="stat score-stat">
+            <span class="stat-label">PONTUAÇÃO</span>
+            <strong id="score-value">0</strong>
+          </div>
+        </div>
+        <div class="hud-bottom">
+          <span id="enemies-value">INIMIGOS: 0</span>
+          <span id="status-message">ELIMINE TODOS OS INIMIGOS</span>
+        </div>
+      </div>
+
+      <div id="crosshair" class="crosshair hidden"><span></span></div>
+
+      <div id="menu-screen" class="screen">
+        <div class="menu-panel">
+          <div class="menu-kicker">UMA CIDADE. UM XERIFE. MUITOS FORAS DA LEI.</div>
+          <h1>WESTERN <span>SHOOTER</span><small>3D</small></h1>
+          <p>Prepare seu revólver e sobreviva às ondas de bandidos.</p>
+          <button id="start-button" class="primary-button">COMEÇAR JOGO</button>
+          <div class="controls-note">
+            <span><b>W A S D</b> Mover</span>
+            <span><b>MOUSE</b> Mirar</span>
+            <span><b>CLIQUE</b> Atirar</span>
+            <span><b>R</b> Recarregar</span>
+            <span><b>ESC</b> Pausar</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="pause-screen" class="screen hidden">
+        <div class="menu-panel compact">
+          <div class="menu-kicker">A CIDADE ESTÁ ESPERANDO</div>
+          <h2>JOGO <span>PAUSADO</span></h2>
+          <button id="resume-button" class="primary-button">CONTINUAR</button>
+          <button id="restart-button" class="secondary-button">RECOMEÇAR</button>
+        </div>
+      </div>
+
+      <div id="end-screen" class="screen hidden">
+        <div class="menu-panel compact">
+          <div id="end-kicker" class="menu-kicker">FIM DE JOGO</div>
+          <h2 id="end-title">DERROTA</h2>
+          <p id="end-description">A cidade ainda precisa de você.</p>
+          <div class="final-score">PONTUAÇÃO <strong id="final-score">0</strong></div>
+          <button id="play-again-button" class="primary-button">JOGAR NOVAMENTE</button>
+        </div>
+      </div>
+
+      <div id="toast" class="toast"></div>
+      <div class="mobile-hint">WASD para mover • Mouse para mirar e atirar • R para recarregar</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
