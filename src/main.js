@@ -452,7 +452,6 @@ function startGame() {
   hud.classList.remove('hidden')
   crosshair.classList.remove('hidden')
   showToast('BOA SORTE, XERIFE!')
-  renderer.domElement.requestPointerLock?.()
 }
 
 function resetGame() {
@@ -511,7 +510,6 @@ function resumeGame() {
   if (state.mode !== 'paused') return
   state.mode = 'playing'
   pauseScreen.classList.add('hidden')
-  renderer.domElement.requestPointerLock?.()
 }
 
 function finishGame(victory) {
